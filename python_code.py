@@ -23,10 +23,16 @@ def make2():
     else:
         if states [0,1]==2 or states[1,0]==2 or states[1,2]==2 or states[2,1]==2:
             "All corner squares are empty return any one of them."
-            emptySquares = [[0,1],[1,0],[1,2],[2,1]]
-            chosen = random.choice(emptySquares)
-            emptySquares.remove(chosen)
-            return board[chosen]
+            while True:
+                emptySquares = [[0,1],[1,0],[1,2],[2,1]]
+                chosen = random.choice(emptySquares)
+                r = chosen[0]
+                c = chosen[1]
+                if states[r,c]!=2:
+                    emptySquares.remove(chosen)
+                    return board[r,c]
+                else:
+                    continue
     
 
 
