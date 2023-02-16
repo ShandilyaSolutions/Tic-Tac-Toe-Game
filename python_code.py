@@ -182,6 +182,10 @@ def go(n,player):
 
 # Game begins
 if __name__=='__main__':
+
+    print(states)
+    print("\n\n\n")
+
     "Odd moves are played by player 1(X) and even moves are played by player 2(O)"
     # Move 1
     go((0,0),1)
